@@ -5,44 +5,52 @@ import delay from './delay';
 // All calls return promises.
 const courses = [
   {
-    id: "react-flux-building-applications",
-    title: "Building Applications in React and Flux",
-    watchHref: "http://www.pluralsight.com/courses/react-flux-building-applications",
-    authorId: "cory-house",
-    length: "5:08",
-    category: "JavaScript"
+    id: 'react-creating-reusable-components',
+    title: 'Creating Reusable React Components',
+    watchHref: 'http://pluralsight.com/courses/react-creating-reusable-components',
+    authorId: 'cory-house',
+    length: '6:20',
+    category: 'JavaScript'
   },
   {
-    id: "clean-code",
-    title: "Clean Code: Writing Code for Humans",
-    watchHref: "http://www.pluralsight.com/courses/writing-clean-code-humans",
-    authorId: "cory-house",
-    length: "3:10",
-    category: "Software Practices"
+    id: 'react-flux-building-applications',
+    title: 'Building Applications in React and Flux',
+    watchHref: 'http://www.pluralsight.com/courses/react-flux-building-applications',
+    authorId: 'cory-house',
+    length: '5:08',
+    category: 'JavaScript'
   },
   {
-    id: "architecture",
-    title: "Architecting Applications for the Real World",
-    watchHref: "http://www.pluralsight.com/courses/architecting-applications-dotnet",
-    authorId: "cory-house",
-    length: "2:52",
-    category: "Software Architecture"
+    id: 'clean-code',
+    title: 'Clean Code: Writing Code for Humans',
+    watchHref: 'http://www.pluralsight.com/courses/writing-clean-code-humans',
+    authorId: 'cory-house',
+    length: '3:10',
+    category: 'Software Practices'
   },
   {
-    id: "career-reboot-for-developer-mind",
-    title: "Becoming an Outlier: Reprogramming the Developer Mind",
-    watchHref: "http://www.pluralsight.com/courses/career-reboot-for-developer-mind",
-    authorId: "cory-house",
-    length: "2:30",
-    category: "Career"
+    id: 'architecture',
+    title: 'Architecting Applications for the Real World',
+    watchHref: 'http://www.pluralsight.com/courses/architecting-applications-dotnet',
+    authorId: 'cory-house',
+    length: '2:52',
+    category: 'Software Architecture'
   },
   {
-    id: "web-components-shadow-dom",
-    title: "Web Component Fundamentals",
-    watchHref: "http://www.pluralsight.com/courses/web-components-shadow-dom",
-    authorId: "cory-house",
-    length: "5:10",
-    category: "HTML5"
+    id: 'career-reboot-for-developer-mind',
+    title: 'Becoming an Outlier: Reprogramming the Developer Mind',
+    watchHref: 'http://www.pluralsight.com/courses/career-reboot-for-developer-mind',
+    authorId: 'cory-house',
+    length: '2:30',
+    category: 'Career'
+  },
+  {
+    id: 'web-components-shadow-dom',
+    title: 'Web Component Fundamentals',
+    watchHref: 'http://www.pluralsight.com/courses/web-components-shadow-dom',
+    authorId: 'cory-house',
+    length: '5:10',
+    category: 'HTML5'
   }
 ];
 
@@ -75,7 +83,7 @@ class CourseApi {
         }
 
         if (course.id) {
-          const existingCourseIndex = courses.findIndex(a => a.id == course.id);
+          const existingCourseIndex = courses.findIndex((a) => a.id == course.id);
           courses.splice(existingCourseIndex, 1, course);
         } else {
           //Just simulating creation here.
@@ -94,8 +102,8 @@ class CourseApi {
   static deleteCourse(courseId) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const indexOfCourseToDelete = courses.findIndex(course => {
-          course.id == courseId;
+        const indexOfCourseToDelete = courses.findIndex((course) => {
+          return course.courseId == courseId;
         });
         courses.splice(indexOfCourseToDelete, 1);
         resolve();
