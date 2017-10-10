@@ -66,7 +66,7 @@ export class ManageCoursePage extends React.Component {
   redirect() {
     this.setState({ saving: false });
     toastr.success('Course saved');
-    this.context.router.push('/courses');
+    this.props.history.push('/courses');
   }
 
   render() {
@@ -101,7 +101,7 @@ function getCourseById(courses, id) {
 }
 
 function mapStateToProps(state, ownProps) {
-  const courseId = ownProps.params.id; // from the path `/course/:id`
+  const courseId = ownProps.match.params.id; // from the path `/course/:id`
 
   let course = { id: '', watchHref: '', title: '', authorId: '', length: '', category: '' };
 
