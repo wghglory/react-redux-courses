@@ -3,12 +3,13 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import Header from './common/Header';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
 class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <Header loading={this.props.loading} />
+        <Header loading={this.props.loading} path={this.props.children.props.path /*this props force re-render of header on each route change*/}/>
         {this.props.children}
       </div>
     );
@@ -26,4 +27,4 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-export default connect(mapStateToProps)(App);
+export default withRouter(connect(mapStateToProps)(App));

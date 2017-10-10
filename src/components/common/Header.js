@@ -6,7 +6,7 @@ import LoadingDots from './LoadingDots';
 const Header = ({ loading }) => {
   return (
     <nav>
-      <NavLink to="/" activeClassName="active">
+      <NavLink to="/" exact activeClassName="active">
         Home
       </NavLink>
       {' | '}
