@@ -1,16 +1,6 @@
-# Starter Kit for [Building Applications in React and Redux in ES6](http://www.pluralsight.com/author/cory-house) on Pluralsight
+# Starter Kit for Building Applications in React and Redux
 
-## Get Started
-
-1. **Install [Node 6](https://nodejs.org)**. Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)
-1. **Clone this repository.** - `git clone https://github.com/coryhouse/pluralsight-redux-starter.git` or [download the zip](https://github.com/coryhouse/pluralsight-redux-starter/archive/master.zip)
-1. **Make sure you're in the directory you just created.** - `cd pluralsight-redux-starter`
-1. **Install Node Packages.** - `npm install`
-1. **Run the app.** - `npm start -s`. This will run the automated build process, start up a webserver, and open the application in your default browser. When doing development with this kit, this command will continue watching files all your files. Every time you hit save the code is rebuilt, linting runs, and tests run automatically. Note: The -s flag is optional. It enables silent mode which suppresses unnecessary messages during the build.
-1. **[Disable safe write](http://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write)** to assure hot reloading works properly.
-1. **Install [React developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Redux Dev Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)** in Chrome.
-
-### Production Dependencies
+## Production Dependencies
 
 | **Dependency** | **Use** |
 |----------|-------|
@@ -26,7 +16,8 @@
 |redux-thunk|Async redux library|
 |toastr|Display messages to the user|
 
-### Development Dependencies
+## Development Dependencies
+
 | **Dependency** | **Use** |
 |----------|-------|
 |babel-cli|Babel Command line interface |

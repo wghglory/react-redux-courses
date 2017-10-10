@@ -37,16 +37,16 @@ require.extensions['.jpg'] = function() {
 
 // Configure JSDOM and set global variables
 // to simulate a browser environment for tests.
-var jsdom = require('jsdom').jsdom;
+var { JSDOM } = require('jsdom');
 
 var exposedProperties = ['window', 'navigator', 'document'];
 
-global.document = jsdom('');
-global.window = document.defaultView;
-Object.keys(document.defaultView).forEach((property) => {
+var dom = new JSDOM('');
+var window = dom.window;
+Object.keys(window).forEach((property) => {
   if (typeof global[property] === 'undefined') {
     exposedProperties.push(property);
-    global[property] = document.defaultView[property];
+    global[property] = window[property];
   }
 });
 
@@ -55,3 +55,11 @@ global.navigator = {
 };
 
 documentRef = document; //eslint-disable-line no-undef
+
+// enzyme setup
+// import { configure } from 'enzyme';
+var configure = require('enzyme').configure;
+// import Adapter from 'enzyme-adapter-react-16';
+var Adapter = require('enzyme-adapter-react-16');
+
+configure({ adapter: new Adapter() });
