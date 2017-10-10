@@ -48,7 +48,6 @@
 |nock| Mock HTTP requests for testing |
 |npm-run-all| Display results of multiple commands on single command line |
 |open|Open app in default browser|
-|react-addons-test-utils| Adds React TestUtils |
 |redux-immutable-state-invariant|Warn when Redux state is mutated|
 |redux-mock-store|Mock Redux store for testing|
 |rimraf|Delete files |
